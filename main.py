@@ -15,7 +15,7 @@ oled code heavily based on code posted by A Costas, referenced below
 
 from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
-import framebuf, sys
+import sys
 import utime
 import dht
 
