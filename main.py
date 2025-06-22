@@ -19,7 +19,6 @@ import framebuf, sys
 import utime
 import dht
 
-
 pix_res_x = 128
 pix_res_y = 64
 
@@ -40,8 +39,6 @@ def init_i2c(scl_pin, sda_pin):
     
     return i2c_dev
 
-
-
 def display_text(oled):
     # Display text on the OLED
     oled.text("Bev's Personal", 5, 5)
@@ -50,9 +47,7 @@ def display_text(oled):
 
 def display_anima(oled):
 
-
     while True:
-
         
         # Clear the specific line by drawing a filled black rectangle
         oled.fill_rect(45, 35, 60, 35, 1)
@@ -60,19 +55,18 @@ def display_anima(oled):
         temp = sensor.temperature()
         hum = sensor.humidity()
 
+        # oled.text(str(hum) + " %" , 45, 50)
+        # oled.text(str(temp) + " C", 45, 35)
+        
+        oled.text( "{:.1f}".format(temp)+ " C", 45, 35)
+        oled.text( "{:.1f}".format(hum)+ " %", 45, 50)
 
-        oled.text(str(temp) + " C", 45, 35)
-        # oled.text( "{:.1f}".format(temp)+ " C", 45, 35)
-        # oled.text( "{:.1f}".format(hum)+ " C", 45, 35)
-        oled.text(str(hum) + " %" , 45, 50)
         oled.show()
         utime.sleep_ms(1000)
-
 
 def main():
     i2c_dev = init_i2c(scl_pin=27, sda_pin=26)
     oled = SSD1306_I2C(pix_res_x, pix_res_y, i2c_dev)
-
     display_text(oled)
     display_anima(oled)
 
