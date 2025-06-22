@@ -72,7 +72,7 @@ def display_anima(oled):
         #oled.show()
         #utime.sleep_ms(4000)
 
-def main():r
+def main():
     i2c_dev = init_i2c(scl_pin=27, sda_pin=26)
     oled = SSD1306_I2C(pix_res_x, pix_res_y, i2c_dev)
     #display_logo(oled)
