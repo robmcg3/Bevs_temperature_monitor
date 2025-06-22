@@ -18,14 +18,14 @@ from ssd1306 import SSD1306_I2C
 import framebuf, sys
 import utime
 import dht
-#import os
+
 
 pix_res_x = 128
 pix_res_y = 64
 
 sensor = dht.DHT22(Pin(0))
 
-#print("start")
+
 def init_i2c(scl_pin, sda_pin):
     # Initialize I2C device
     i2c_dev = I2C(1, scl=Pin(scl_pin), sda=Pin(sda_pin), freq=200000)
@@ -49,11 +49,10 @@ def display_text(oled):
     oled.show()
 
 def display_anima(oled):
-    # Display temp and humidity on the OLED
-    #start_time = utime.ticks_ms()
+
 
     while True:
-        #elapsed_time = (utime.ticks_diff(utime.ticks_ms(), start_time) // 1000) + 1
+
         
         # Clear the specific line by drawing a filled black rectangle
         oled.fill_rect(45, 35, 60, 35, 1)
@@ -61,21 +60,19 @@ def display_anima(oled):
         temp = sensor.temperature()
         hum = sensor.humidity()
 
-        #oled.text("Timer:", 5, 30)
+
         oled.text(str(temp) + " C", 45, 35)
         # oled.text( "{:.1f}".format(temp)+ " C", 45, 35)
         # oled.text( "{:.1f}".format(hum)+ " C", 45, 35)
         oled.text(str(hum) + " %" , 45, 50)
         oled.show()
         utime.sleep_ms(1000)
-        #oled.fill_rect(45,35,60,35,1)
-        #oled.show()
-        #utime.sleep_ms(4000)
+
 
 def main():
     i2c_dev = init_i2c(scl_pin=27, sda_pin=26)
     oled = SSD1306_I2C(pix_res_x, pix_res_y, i2c_dev)
-    #display_logo(oled)
+
     display_text(oled)
     display_anima(oled)
 
