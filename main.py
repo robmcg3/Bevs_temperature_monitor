@@ -18,12 +18,14 @@ from ssd1306 import SSD1306_I2C
 import framebuf, sys
 import utime
 import dht
-import os
+#import os
 
 pix_res_x = 128
 pix_res_y = 64
+
 sensor = dht.DHT22(Pin(0))
-print("start")
+
+#print("start")
 def init_i2c(scl_pin, sda_pin):
     # Initialize I2C device
     i2c_dev = I2C(1, scl=Pin(scl_pin), sda=Pin(sda_pin), freq=200000)
