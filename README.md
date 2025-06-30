@@ -10,7 +10,7 @@ Libraries used
 
 
 ## precusor actions
--[] install micropython on pi
--[] install ssd1306. (https://github.com/robmcg3/ArduinoIDEProjects)
+- [ ] install micropython on pi
+- [ ] install ssd1306. (https://github.com/robmcg3/ArduinoIDEProjects)
 
 
