@@ -11,6 +11,10 @@ Libraries used
 
 ## precusor actions
 - [ ] install micropython on pi
-- [ ] install ssd1306. (https://github.com/robmcg3/ArduinoIDEProjects)
+    download uf2
+    press bootselect on pico
+    find rpi-rp1 folder
+    drag uf2 to rpi-rp1 folder
+- [ ] install ssd1306. [ssd1306 library](https://github.com/robmcg3/ArduinoIDEProjects)
 
 
