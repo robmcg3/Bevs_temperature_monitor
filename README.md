@@ -8,3 +8,9 @@ Libraries used
 - machine (core library)
 - ssd1306 (not core library)
 
+
+## precusor actions
+-[] install micropython on pi
+-[] install ssd1306. (https://github.com/robmcg3/ArduinoIDEProjects)
+
+
