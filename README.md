@@ -10,6 +10,13 @@ Libraries used
 
 
 ## precusor actions
+- [ ] link pico to computer
+- [ ] comfirm files on pico
+- [ ] find git files on speedymclappy
+- [ ] break out parts of code by section
+    oled
+    temperature sensor
+    printing on console
 - [ ] install micropython on pi
     download uf2
     press bootselect on pico
