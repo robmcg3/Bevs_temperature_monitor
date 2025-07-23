@@ -14,14 +14,14 @@ Libraries used
 - [ ] comfirm files on pico
 - [ ] find git files on speedymclappy
 - [ ] break out parts of code by section
-    oled
-    temperature sensor
-    printing on console
+    - [ ] oled
+    - [ ] temperature sensor
+    - [ ] printing on console
 - [ ] install micropython on pi
-    download uf2
-    press bootselect on pico
-    find rpi-rp1 folder
-    drag uf2 to rpi-rp1 folder
+    - [ ] download uf2
+    - [ ] press bootselect on pico
+    - [ ] find rpi-rp1 folder
+    - [ ] drag uf2 to rpi-rp1 folder
 - [ ] install ssd1306. [ssd1306 library](https://github.com/robmcg3/ArduinoIDEProjects)
 
 
