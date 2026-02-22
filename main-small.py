@@ -1,4 +1,4 @@
-# for smaller display on pico zero
+i# for smaller display on pico zero
 
 """
 
@@ -17,7 +17,7 @@ oled code heavily based on code posted by A Costas, referenced below
 
 """
 todo
-update pins for pico zero
+
 update location for text
 remove header?
 
@@ -34,7 +34,7 @@ pix_res_y = 32 #resolution has been updated
 
 
 
-sensor = dht.DHT22(Pin(0))
+sensor = dht.DHT22(Pin(0)) #pin ok
 
 
 def init_i2c(scl_pin, sda_pin):
@@ -50,13 +50,13 @@ def init_i2c(scl_pin, sda_pin):
         print("I2C Configuration: {}".format(i2c_dev))
     
     return i2c_dev
-
+"""
 def display_text(oled): #update coordinates or remove
     # Display text on the OLED
     oled.text("Bev's Personal", 5, 5)
     oled.text("Humidity Sensor", 5, 15)
     oled.show()
-
+"""
 def display_anima(oled):
 
     while True:
@@ -70,14 +70,14 @@ def display_anima(oled):
         # oled.text(str(hum) + " %" , 45, 50)
         # oled.text(str(temp) + " C", 45, 35)
         
-        oled.text( "{:.1f}".format(temp)+ " C", 45, 35)#update coordinates
-        oled.text( "{:.1f}".format(hum)+ " %", 45, 50)#update coordinates
+        oled.text( "{:.1f}".format(temp)+ " C  ", 45, 35)#update coordinates
+        oled.text( "{:.1f}".format(hum)+ " %  ", 45, 50)#update coordinates
 
         oled.show()
         utime.sleep_ms(1000)
 
 def main():
-    i2c_dev = init_i2c(scl_pin=27, sda_pin=26) #update pins
+    i2c_dev = init_i2c(scl_pin=27, sda_pin=26) #pins okay
     oled = SSD1306_I2C(pix_res_x, pix_res_y, i2c_dev)
     display_text(oled)
     display_anima(oled)
