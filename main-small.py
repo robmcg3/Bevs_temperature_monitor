@@ -1,4 +1,4 @@
-    i# for smaller display on pico zero
+    # update for smaller display 128 x 32 on pico zero
 
 """
 
@@ -18,8 +18,8 @@ oled code heavily based on code posted by A Costas, referenced below
 """
 todo
 
-update location for text
-remove header?
+update location for blanking rectangle 
+
 
 """
 
@@ -51,6 +51,7 @@ def init_i2c(scl_pin, sda_pin):
     
     return i2c_dev
 """
+commented out for a smaller screen
 def display_text(oled): #update coordinates or remove
     # Display text on the OLED
     oled.text("Bev's Personal", 5, 5)
@@ -72,11 +73,11 @@ def display_anima(oled):
         # oled.text(str(hum) + " %" , 45, 50)
         # oled.text(str(temp) + " C", 45, 35)
         
-        oled.text( "{:.1f}".format(temp)+ " C  ", 45, 35)#update coordinates
-        oled.text( "{:.1f}".format(hum)+ " %  ", 45, 50)#update coordinates
+        oled.text( "{:.1f}".format(temp)+ " C  ", 45, 5)#updated coordinates
+        oled.text( "{:.1f}".format(hum)+ " %  ", 45, 15)#updated coordinates
 
         oled.show()
-        utime.sleep_ms(1000)
+        utime.sleep_ms(5000)#updated from one second to 5 seconds
 
 def main():
     i2c_dev = init_i2c(scl_pin=27, sda_pin=26) #pins okay
