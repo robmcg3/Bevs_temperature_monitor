@@ -59,7 +59,7 @@ def display_anima(oled):
         
         # Clear the specific line by drawing a filled black rectangle
         #oled.fill_rect(45, 35, 60, 35, 1)#update coordinates
-        oled.fill(1) # change to clear entire screen
+        oled.fill(0) # change to clear entire screen
         sensor.measure()
         temp = sensor.temperature()
         hum = sensor.humidity()
