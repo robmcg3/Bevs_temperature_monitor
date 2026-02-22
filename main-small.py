@@ -1,4 +1,4 @@
-    # update for smaller display 128 x 32 on pico zero
+    # updated for smaller display 128 x 32 on pico zero
 
 """
 
@@ -15,13 +15,6 @@ oled code heavily based on code posted by A Costas, referenced below
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
-"""
-todo
-
-update location for blanking rectangle 
-
-
-"""
 
 from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
@@ -65,7 +58,8 @@ def display_anima(oled):
         # location definition  text def text(self, string, x, y, col=1)
         
         # Clear the specific line by drawing a filled black rectangle
-        oled.fill_rect(45, 35, 60, 35, 1)#update coordinates
+        #oled.fill_rect(45, 35, 60, 35, 1)#update coordinates
+        oled.fill(1) # change to clear entire screen
         sensor.measure()
         temp = sensor.temperature()
         hum = sensor.humidity()
