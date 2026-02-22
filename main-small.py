@@ -1,4 +1,4 @@
-i# for smaller display on pico zero
+    i# for smaller display on pico zero
 
 """
 
@@ -60,6 +60,8 @@ def display_text(oled): #update coordinates or remove
 def display_anima(oled):
 
     while True:
+        
+        # location definition  text def text(self, string, x, y, col=1)
         
         # Clear the specific line by drawing a filled black rectangle
         oled.fill_rect(45, 35, 60, 35, 1)#update coordinates
