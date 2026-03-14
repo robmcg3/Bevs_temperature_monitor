@@ -1,8 +1,8 @@
-# updated for smaller display 128 x 32 on pico zero
+# updated for smaller display 1602 on pico zero
 
 """
 
-uses a dht22 and oled display to show the temperature and humidity. 
+uses a dht22 and 1602 lcd display to show the temperature and humidity. 
 oled code heavily based on code posted by A Costas, referenced below
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
