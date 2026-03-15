@@ -84,7 +84,7 @@ def  main():
         utime.sleep(2)
         lcd.move_to(0,0)
         lcd.putstr(string_temperature)
-        lcd.move_to(0,0)
+        lcd.move_to(0,1)
         lcd.putstr(string_humid)
         
         #oled.text( "{:.1f}".format(temp)+ " C", 45, 35)
