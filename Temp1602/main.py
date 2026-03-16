@@ -18,7 +18,7 @@ from machine import Pin, I2C
 import sys
 import utime
 import dht
-from lcd_api import LcdApi
+from lcd_api import LcdApi #class
 from pico_i2c_lcd import I2cLcd
 
 #pix_res_x = 128
@@ -74,12 +74,15 @@ def  main():
 
         formatted_temperature = "{:.2f}".format(temperature)
         string_temperature = str("Temp:" + formatted_temperature)
-        print(string_temperature)
+        print(string_temperature)#debugging only?
         
         formatted_humid = "{:.2f}".format(hum)
         string_humid = str("Humidity: " + formatted_humid)
-        print(string_humid)
+        print(string_humid) #debugging only?
         
+        
+        #  parameters for move_to method 
+        #def move_to(self, cursor_x, cursor_y)
         
         utime.sleep(2)
         lcd.move_to(0,0)
