@@ -11,6 +11,13 @@ updated to lcd1602 screen
 ┃ GitHub: github.com/arcostasi                             ┃
 ┃ License: MIT                                             ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+????????
+consider which approach is better 
+the methods approach or 
+the all in one main approach 
+?????????
+
 """
 
 from machine import Pin, I2C
@@ -30,6 +37,8 @@ I2C_ADDR     = 63
 I2C_NUM_ROWS = 2
 I2C_NUM_COLS = 16
 
+#next two lines duplicated in main below
+#which is better?
 i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
 lcd = I2cLcd(i2c, I2C_ADDR, I2C_NUM_ROWS, I2C_NUM_COLS)
 
