@@ -31,7 +31,7 @@ from pico_i2c_lcd import I2cLcd
 #pix_res_x = 128
 #pix_res_y = 64
 
-sensor = dht.DHT22(Pin(0))
+sensor = dht.DHT22(Pin(15))
 
 I2C_ADDR     = 63
 I2C_NUM_ROWS = 2
