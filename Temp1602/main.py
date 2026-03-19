@@ -31,7 +31,7 @@ from pico_i2c_lcd import I2cLcd
 #pix_res_x = 128
 #pix_res_y = 64
 
-sensor = dht.DHT22(Pin(15))
+sensor = dht.DHT22(machine.Pin(15))
 
 I2C_ADDR     = 63
 I2C_NUM_ROWS = 2
@@ -65,8 +65,9 @@ lcd = I2cLcd(i2c, I2C_ADDR, I2C_NUM_ROWS, I2C_NUM_COLS)
     #oled.show()
 
 def  main():
-    i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
-    lcd = I2cLcd(i2c, I2C_ADDR, I2C_NUM_ROWS, I2C_NUM_COLS)
+    #i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
+    #lcd = I2cLcd(i2c, I2C_ADDR, I2C_NUM_ROWS, I2C_NUM_COLS)
+    # already in beginning
 
 
     while True:
