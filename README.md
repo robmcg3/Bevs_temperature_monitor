@@ -33,6 +33,8 @@ Libraries used
 - hint: If you meant to add a submodule, use:
 - hint: 
 - hint: 	git submodule add <url> tftDisplay/libraries/PicoMPDisplay
+
+
 - hint: 
 - hint: If you added this path by mistake, you can remove it from the
 - hint: index with:
@@ -42,3 +44,11 @@ Libraries used
 - warning: adding embedded git repository: tftDisplay/libraries/TFT_SPI_cpp
 - warning: adding embedded git repository: tftDisplay/libraries/micropython-st7735
 - warning: adding embedded git repository: tftDisplay/libraries/st7789-library-for-pico-cpp
+
+
+## repository with libraries to check
+
+- git clone https://github.com/kwinter745321/PicoMPDisplay.git//github.com/robmcg3/Bevs_temperature_monitor
+- git clone https://github.com/ArmDeveloperEcosystem/st7789-library-for-pico.git
+- git clone https://github.com/Bodmer/TFT_eSPI.git
+- 
