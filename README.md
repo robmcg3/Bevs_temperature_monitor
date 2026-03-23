@@ -24,7 +24,7 @@ Libraries used
     - [ ] drag uf2 to rpi-rp1 folder
 - [ ] install ssd1306. [ssd1306 library](https://github.com/robmcg3/ArduinoIDEProjects)
 
-
+## git add warning
 git add .
 warning: adding embedded git repository: tftDisplay/libraries/PicoMPDisplay
 hint: You've added another git repository inside your current repository.
@@ -37,8 +37,7 @@ hint:
 hint: If you added this path by mistake, you can remove it from the
 hint: index with:
 hint: 
-hint: 	git rm --cached tftDisplay/libraries/PicoMPDisplay
-hint: 
+hint: 	git rm --cached tftDisplay/libraries/PicoMPDisplayhint: 
 hint: See "git help submodule" for more information.
 warning: adding embedded git repository: tftDisplay/libraries/TFT_SPI_cpp
 warning: adding embedded git repository: tftDisplay/libraries/micropython-st7735
